@@ -1,0 +1,16 @@
+{
+  "name": "realtime-foododering-app",
+  "version": "1.0.0",
+  "description": "This is our realtime food ordering app.",
+  "main": "index.js",
+  "author": "Shashank Yadav",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-ejs-layouts": "^2.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
