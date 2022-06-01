@@ -1,5 +1,5 @@
 {
-  "name": "realtime-foododering-app",
+  "name": "realtime-pizza-app",
   "version": "1.0.0",
   "description": "This is our realtime food ordering app.",
   "main": "index.js",
@@ -8,9 +8,17 @@
   "dependencies": {
     "ejs": "^3.1.8",
     "express": "^4.18.1",
-    "express-ejs-layouts": "^2.5.1"
+    "express-ejs-layouts": "^2.5.1",
+    "laravel-mix": "^6.0.43",
+    "tilt.js": "^1.2.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.16"
+    "autoprefixer": "^10.4.7",
+    "nodemon": "^2.0.16",
+    "postcss": "^8.4.14",
+    "resolve-url-loader": "5.0.0",
+    "sass": "^1.52.1",
+    "sass-loader": "12.1.0",
+    "tailwindcss": "^3.0.24"
   }
 }
