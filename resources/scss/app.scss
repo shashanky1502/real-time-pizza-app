@@ -27,3 +27,20 @@ section.hero{
 .size{
     background: $secondary;
 }
+
+button{
+    transition: all 0.3s ease-in-out;
+    background: $secondary;
+}
+
+section.cart{
+    background: $secondary;
+    .amount{
+        color: $primary;
+    }
+}
+
+section.login{
+    background: $secondary;
+    min-height: calc(100vh - 85px);
+}

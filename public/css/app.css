@@ -25,3 +25,20 @@ section.hero {
 .size {
   background: #F8F8F8;
 }
+
+button {
+  transition: all 0.3s ease-in-out;
+  background: #F8F8F8;
+}
+
+section.cart {
+  background: #F8F8F8;
+}
+section.cart .amount {
+  color: #FE5F1E;
+}
+
+section.login {
+  background: #F8F8F8;
+  min-height: calc(100vh - 85px);
+}
