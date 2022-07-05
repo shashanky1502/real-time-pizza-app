@@ -8,6 +8,7 @@
   "dependencies": {
     "@chakra-ui/toast": "^2.1.0",
     "axios": "^0.27.2",
+    "bcrypt": "^5.0.1",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^3.2.0",
     "dotenv": "^16.0.1",
@@ -21,6 +22,8 @@
     "mongodb": "^4.7.0",
     "mongoose": "^6.3.6",
     "noty": "^3.2.0-beta-deprecated",
+    "passport": "0.4.1",
+    "passport-local": "^1.0.0",
     "sweetalert2": "^11.4.19",
     "tilt.js": "^1.2.1",
     "toastify-js": "^1.11.2"

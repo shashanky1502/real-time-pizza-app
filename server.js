@@ -9,7 +9,7 @@ const mongoose = require('mongoose');
 const session = require('express-session');
 const flash = require('express-flash');
 const MongoDbStore = require('connect-mongo')(session);    //import connect-mongo module to store the session in the mongodb database
-
+const passport = require('passport');
 
 
 
@@ -37,14 +37,22 @@ mongoose.connect(url,err => {
     }));
     app.use(flash());
 
+     //passport configuration
+     const passportInit = require('./app/config/passport');
+     passportInit(passport);
+     app.use(passport.initialize());
+     app.use(passport.session());
+
 
 // Assets
 app.use(express.static('public'));                             //use the public folder to store the css and js files that are used in the frontend 
+app.use(express.urlencoded({extended:false}));                 //use the extended:true to parse the data in the form
 app.use(express.json());                                      //use the json middleware to parse the json data in the request body
 
 //global middleware
 app.use((req,res,next)=>{
     res.locals.session=req.session;
+    res.locals.user = req.user;
     next();
 })
 
