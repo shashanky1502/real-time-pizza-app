@@ -15,117 +15,23 @@
 <section class="menu container mx-auto px-8 py-8">
     <h1 class="text-xl font-bold mb-8">All Pizzas</h1>
     <div class="grid grid-cols-4 gap-12">
+        <% pizzas.forEach(function(pizza){ %>     <!-- for each pizza in the array, render a card also shashank we need to put js only in <% %> -->
         <div class="w-64">
-            <img class="h-40 mb-4 mx-auto" src="/images/pizza.png" alt="">
+            <img data-tilt class="h-40 mb-4 mx-auto" src="/images/<%-pizza.image %>" alt="">
             <div class="text-center">
-                <h1 class="mb-4 text-lg">Margherita</h1>
-                <span class="size py-1 px-4 rounded-full uppercase text-xs ">small</span>
+                <h1 class="mb-4 text-lg"><%-pizza.name %></h1>
+                <span class="size py-1 px-4 rounded-full uppercase text-xs "><%-pizza.size %></span>
                 <div class="flex items-center justify-around mt-6">
-                    <span class="font-bold text-lg">₹250</span>
-                    <button class="py-1 px-6 bg-transparent hover:bg-orange-500 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded-full">
+                    <span class="font-bold text-lg">₹<%-pizza.price %></span>
+                    <button data-pizza="<%= JSON.stringify(pizza) %>" class="add-to-cart py-1 px-6 bg-transparent hover:bg-orange-500 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded-full">
                         <span>+</span>
                         <span>Add</span>
                     </button>
                 </div>
             </div>
         </div>
-        <div class="w-64">
-            <img class="h-40 mb-4 mx-auto" src="/images/pizza.png" alt="">
-            <div class="text-center">
-                <h1 class="mb-4 text-lg">Margherita</h1>
-                <span class="size py-1 px-4 rounded-full uppercase text-xs ">small</span>
-                <div class="flex items-center justify-around mt-6">
-                    <span class="font-bold text-lg">₹250</span>
-                    <button class="py-1 px-6 bg-transparent hover:bg-orange-500 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded-full">
-                        <span>+</span>
-                        <span>Add</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="w-64">
-            <img class="h-40 mb-4 mx-auto" src="/images/pizza.png" alt="">
-            <div class="text-center">
-                <h1 class="mb-4 text-lg">Margherita</h1>
-                <span class="size py-1 px-4 rounded-full uppercase text-xs ">small</span>
-                <div class="flex items-center justify-around mt-6">
-                    <span class="font-bold text-lg">₹250</span>
-                    <button class="py-1 px-6 bg-transparent hover:bg-orange-500 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded-full">
-                        <span>+</span>
-                        <span>Add</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="w-64">
-            <img class="h-40 mb-4 mx-auto" src="/images/pizza.png" alt="">
-            <div class="text-center">
-                <h1 class="mb-4 text-lg">Margherita</h1>
-                <span class="size py-1 px-4 rounded-full uppercase text-xs ">small</span>
-                <div class="flex items-center justify-around mt-6">
-                    <span class="font-bold text-lg">₹250</span>
-                    <button class="py-1 px-6 bg-transparent hover:bg-orange-500 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded-full">
-                        <span>+</span>
-                        <span>Add</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="w-64">
-            <img class="h-40 mb-4 mx-auto" src="/images/pizza.png" alt="">
-            <div class="text-center">
-                <h1 class="mb-4 text-lg">Margherita</h1>
-                <span class="size py-1 px-4 rounded-full uppercase text-xs ">small</span>
-                <div class="flex items-center justify-around mt-6">
-                    <span class="font-bold text-lg">₹250</span>
-                    <button class="py-1 px-6 bg-transparent hover:bg-orange-500 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded-full">
-                        <span>+</span>
-                        <span>Add</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="w-64">
-            <img class="h-40 mb-4 mx-auto" src="/images/pizza.png" alt="">
-            <div class="text-center">
-                <h1 class="mb-4 text-lg">Margherita</h1>
-                <span class="size py-1 px-4 rounded-full uppercase text-xs ">small</span>
-                <div class="flex items-center justify-around mt-6">
-                    <span class="font-bold text-lg">₹250</span>
-                    <button class="py-1 px-6 bg-transparent hover:bg-orange-500 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded-full">
-                        <span>+</span>
-                        <span>Add</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="w-64">
-            <img class="h-40 mb-4 mx-auto" src="/images/pizza.png" alt="">
-            <div class="text-center">
-                <h1 class="mb-4 text-lg">Margherita</h1>
-                <span class="size py-1 px-4 rounded-full uppercase text-xs ">small</span>
-                <div class="flex items-center justify-around mt-6">
-                    <span class="font-bold text-lg">₹250</span>
-                    <button class="py-1 px-6 bg-transparent hover:bg-orange-500 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded-full">
-                        <span>+</span>
-                        <span>Add</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="w-64">
-            <img class="h-40 mb-4 mx-auto" src="/images/pizza.png" alt="">
-            <div class="text-center">
-                <h1 class="mb-4 text-lg">Margherita</h1>
-                <span class="size py-1 px-4 rounded-full uppercase text-xs ">small</span>
-                <div class="flex items-center justify-around mt-6">
-                    <span class="font-bold text-lg">₹250</span>
-                    <button class="py-1 px-6 bg-transparent hover:bg-orange-500 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded-full">
-                        <span>+</span>
-                        <span>Add</span>
-                    </button>
-                </div>
-            </div>
-        </div>
+        <% }); %>  <!-- end of forEach loop for pizzas array -->
+    
     </div>
 </section>
+
