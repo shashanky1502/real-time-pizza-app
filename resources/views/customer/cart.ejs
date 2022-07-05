@@ -24,20 +24,23 @@
                 <span class="text-lg font-bold">Total Amount:</span>
                 <span class="amount text-2xl font-bold ml-2">₹<%= session.cart.totalPrice %></span>
             </div>
+            <% if(user) { %>
             <div>
-                <form action=""class="mt-12">
-                    <input class="border border-gray-400 p-2 w-1/2 mb-4" type="text" placeholder="Phone number">
-                    <input class="border border-gray-400 p-2 w-1/2" type="text" placeholder="Address">
+                <form action="/orders" method="POST" class="mt-12">
+                    <input name="phone" class="border border-gray-400 p-2 w-1/2 mb-4" type="text" placeholder="Phone number">
+                    <input name="address" class="border border-gray-400 p-2 w-1/2" type="text" placeholder="Address">
                     <div>
-                        <button data-tilt class="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-6 mt-6 border-b-4 border-orange-700 hover:border-orange-500 rounded-full hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-75">
+                        <button data-tilt class="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-6 mt-6 border-b-4 border-orange-700 hover:border-orange-500 rounded-full hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-75" type="submit">
                             Order Now
                            </button>
                     </div>
                 </form>
             </div>
-            <!-- <a href="" class="inline-block bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-6 mt-6 border-b-4 border-orange-700 hover:border-orange-500 rounded-full hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-75">
+            <% } else { %>
+            <a href="" class="inline-block bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-6 mt-6 border-b-4 border-orange-700 hover:border-orange-500 rounded-full hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-75">
                 Login to continue
-            </a> -->
+            </a>
+            <% } %>
         </div>
     </div>
     <% } else { %>

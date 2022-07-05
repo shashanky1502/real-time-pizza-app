@@ -44,3 +44,7 @@ section.login{
     background: $secondary;
     min-height: calc(100vh - 85px);
 }
+
+a.link {
+    color: $primary;
+}
