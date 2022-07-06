@@ -1,10 +1,11 @@
 import axios from 'axios'
 import moment from 'moment'
+import Swal from 'sweetalert2'
 
-export function initAdmin() {
+export function initAdmin(socket) {
     const orderTableBody = document.querySelector('#orderTableBody')
     let orders = []
-    let markup
+    let markup;
 
     axios.get('/admin/orders', {
         headers: {
@@ -78,4 +79,23 @@ export function initAdmin() {
         `
         }).join('')
     }
+    // Socket
+    socket.on('orderPlaced', (order) => {
+        // new Noty({
+        //     type: 'success',
+        //     timeout: 1000,
+        //     text: 'New order!',
+        //     progressBar: false,
+        // }).show();
+        Swal.fire({
+            icon: 'success',
+            title: 'New Order!',
+            showConfirmButton: false,
+            timer: 1000,
+            width: 400,
+          })
+        orders.unshift(order)
+        orderTableBody.innerHTML = ''
+        orderTableBody.innerHTML = generateMarkup(orders)
+    })
 }
