@@ -2,7 +2,7 @@
     <div class="container mx-auto flex items-center justify-between">
         <div class="w-1/2">
             <h6 class="text-lg"><em>Are you hungry?</em></h6>
-            <h1 class="text-6xl font-bold">Don't wait!</h1>
+            <h1 class="text-3xl md:text-6xl font-bold">Don't wait!</h1>
             <button data-tilt class="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-6 mt-6 border-b-4 border-orange-700 hover:border-orange-500 rounded-full hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-75">
                Order Now
               </button>
@@ -14,9 +14,9 @@
 </section>
 <section class="menu container mx-auto px-8 py-8">
     <h1 class="text-xl font-bold mb-8">All Pizzas</h1>
-    <div class="grid grid-cols-4 gap-12">
+    <div class="grid grid-cols--1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 col-gap-12 row-gap-16">
         <% pizzas.forEach(function(pizza){ %>     <!-- for each pizza in the array, render a card also shashank we need to put js only in <% %> -->
-        <div class="w-64">
+        <div class="w-full md:w-64 p-4">
             <img data-tilt class="h-40 mb-4 mx-auto" src="/images/<%-pizza.image %>" alt="">
             <div class="text-center">
                 <h1 class="mb-4 text-lg"><%-pizza.name %></h1>

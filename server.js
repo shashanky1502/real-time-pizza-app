@@ -13,8 +13,7 @@ const passport = require("passport");
 const Emitter = require("events");
 
 // Connect to MongoDB
-const url = "mongodb://127.0.0.1:27017/pizza"; //create a url to connect to the database
-mongoose.connect(url, (err) => {
+mongoose.connect(process.env.MONGO_CONNECTION_URL, (err) => {
   if (err) throw err;
   console.log("connected to MongoDB...");
 });
@@ -66,6 +65,11 @@ app.set("views", path.join(__dirname, "/resources/views")); //set the path of th
 app.set("view engine", "ejs");
 
 require("./routes/web")(app); //import the routes/web.js file and pass the app as an argument to the function and use the returned object to set the routes
+app.use((req, res) => {
+  res.status(404).render('errors/404');
+})
+
+
 
 const server = app.listen(PORT, () => {
   //listen to the port

@@ -1,6 +1,6 @@
 <section class="cart py-16">
     <% if(session.cart) { %>
-    <div class="order container mx-auto w-1/2">
+    <div class="order container mx-auto xl:w-1/2">
         <div class="flex items-center border-b border-grey-300 pb-4">
             <img src="/images/cart-black.png" alt="?">
             <h1 class="font-bold ml-4 text-2xl ">Order summary</h1>
@@ -37,7 +37,7 @@
                 </form>
             </div>
             <% } else { %>
-            <a href="" class="inline-block bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-6 mt-6 border-b-4 border-orange-700 hover:border-orange-500 rounded-full hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-75">
+            <a href="/login" class="inline-block bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-6 mt-6 border-b-4 border-orange-700 hover:border-orange-500 rounded-full hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-75">
                 Login to continue
             </a>
             <% } %>
